@@ -1,0 +1,81 @@
+{
+  "name": "job5156-www-web",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "scripts": {
+    "start_webpack": "webpack --mode development --watch ",
+    "build:dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "egg-scripts start --title=egg-server-job5156-www-web",
+    "start:dev": "cross-env EGG_SERVER_ENV=dev yarn start",
+    "start:test": "cross-env EGG_SERVER_ENV=test yarn start",
+    "stop": "egg-scripts stop --title=egg-server-job5156-www-web",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.1",
+    "egg": "^2.15.1",
+    "egg-scripts": "^2.11.0",
+    "egg-view-nunjucks": "^2.2.0",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.15",
+    "lowdb": "^1.0.0",
+    "moment": "^2.24.0",
+    "qs": "^6.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^2.0.2",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "egg-webpack": "^4.5.1",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0",
+    "file-loader": "^4.2.0",
+    "glob": "^7.1.4",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-manifest-plugin": "^2.0.4",
+    "webpack-spritesmith": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,223 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$checked-01-name: 'checked_01';
+$checked-01-x: 84px;
+$checked-01-y: 131px;
+$checked-01-offset-x: -84px;
+$checked-01-offset-y: -131px;
+$checked-01-width: 20px;
+$checked-01-height: 20px;
+$checked-01-total-width: 175px;
+$checked-01-total-height: 151px;
+$checked-01-image: '../images/icon-sprites.png';
+$checked-01: (84px, 131px, -84px, -131px, 20px, 20px, 175px, 151px, '../images/icon-sprites.png', 'checked_01', );
+$checked-02-name: 'checked_02';
+$checked-02-x: 0px;
+$checked-02-y: 131px;
+$checked-02-offset-x: 0px;
+$checked-02-offset-y: -131px;
+$checked-02-width: 20px;
+$checked-02-height: 20px;
+$checked-02-total-width: 175px;
+$checked-02-total-height: 151px;
+$checked-02-image: '../images/icon-sprites.png';
+$checked-02: (0px, 131px, 0px, -131px, 20px, 20px, 175px, 151px, '../images/icon-sprites.png', 'checked_02', );
+$close-btn-02-default-name: 'close_btn_02_default';
+$close-btn-02-default-x: 56px;
+$close-btn-02-default-y: 131px;
+$close-btn-02-default-offset-x: -56px;
+$close-btn-02-default-offset-y: -131px;
+$close-btn-02-default-width: 20px;
+$close-btn-02-default-height: 20px;
+$close-btn-02-default-total-width: 175px;
+$close-btn-02-default-total-height: 151px;
+$close-btn-02-default-image: '../images/icon-sprites.png';
+$close-btn-02-default: (56px, 131px, -56px, -131px, 20px, 20px, 175px, 151px, '../images/icon-sprites.png', 'close_btn_02_default', );
+$close-btn-02-name: 'close_btn_02';
+$close-btn-02-x: 28px;
+$close-btn-02-y: 131px;
+$close-btn-02-offset-x: -28px;
+$close-btn-02-offset-y: -131px;
+$close-btn-02-width: 20px;
+$close-btn-02-height: 20px;
+$close-btn-02-total-width: 175px;
+$close-btn-02-total-height: 151px;
+$close-btn-02-image: '../images/icon-sprites.png';
+$close-btn-02: (28px, 131px, -28px, -131px, 20px, 20px, 175px, 151px, '../images/icon-sprites.png', 'close_btn_02', );
+$close-btn-03-name: 'close_btn_03';
+$close-btn-03-x: 0px;
+$close-btn-03-y: 73px;
+$close-btn-03-offset-x: 0px;
+$close-btn-03-offset-y: -73px;
+$close-btn-03-width: 50px;
+$close-btn-03-height: 50px;
+$close-btn-03-total-width: 175px;
+$close-btn-03-total-height: 151px;
+$close-btn-03-image: '../images/icon-sprites.png';
+$close-btn-03: (0px, 73px, 0px, -73px, 50px, 50px, 175px, 151px, '../images/icon-sprites.png', 'close_btn_03', );
+$close-thanks-name: 'close_thanks';
+$close-thanks-x: 146px;
+$close-thanks-y: 74px;
+$close-thanks-offset-x: -146px;
+$close-thanks-offset-y: -74px;
+$close-thanks-width: 24px;
+$close-thanks-height: 24px;
+$close-thanks-total-width: 175px;
+$close-thanks-total-height: 151px;
+$close-thanks-image: '../images/icon-sprites.png';
+$close-thanks: (146px, 74px, -146px, -74px, 24px, 24px, 175px, 151px, '../images/icon-sprites.png', 'close_thanks', );
+$email-circle-default-name: 'email_circle_default';
+$email-circle-default-x: 0px;
+$email-circle-default-y: 0px;
+$email-circle-default-offset-x: 0px;
+$email-circle-default-offset-y: 0px;
+$email-circle-default-width: 65px;
+$email-circle-default-height: 65px;
+$email-circle-default-total-width: 175px;
+$email-circle-default-total-height: 151px;
+$email-circle-default-image: '../images/icon-sprites.png';
+$email-circle-default: (0px, 0px, 0px, 0px, 65px, 65px, 175px, 151px, '../images/icon-sprites.png', 'email_circle_default', );
+$email-circle-hover-name: 'email_circle_hover';
+$email-circle-hover-x: 73px;
+$email-circle-hover-y: 0px;
+$email-circle-hover-offset-x: -73px;
+$email-circle-hover-offset-y: 0px;
+$email-circle-hover-width: 65px;
+$email-circle-hover-height: 65px;
+$email-circle-hover-total-width: 175px;
+$email-circle-hover-total-height: 151px;
+$email-circle-hover-image: '../images/icon-sprites.png';
+$email-circle-hover: (73px, 0px, -73px, 0px, 65px, 65px, 175px, 151px, '../images/icon-sprites.png', 'email_circle_hover', );
+$eye-close-name: 'eye_close';
+$eye-close-x: 112px;
+$eye-close-y: 131px;
+$eye-close-offset-x: -112px;
+$eye-close-offset-y: -131px;
+$eye-close-width: 22px;
+$eye-close-height: 18px;
+$eye-close-total-width: 175px;
+$eye-close-total-height: 151px;
+$eye-close-image: '../images/icon-sprites.png';
+$eye-close: (112px, 131px, -112px, -131px, 22px, 18px, 175px, 151px, '../images/icon-sprites.png', 'eye_close', );
+$eye-open-name: 'eye_open';
+$eye-open-x: 142px;
+$eye-open-y: 131px;
+$eye-open-offset-x: -142px;
+$eye-open-offset-y: -131px;
+$eye-open-width: 22px;
+$eye-open-height: 18px;
+$eye-open-total-width: 175px;
+$eye-open-total-height: 151px;
+$eye-open-image: '../images/icon-sprites.png';
+$eye-open: (142px, 131px, -142px, -131px, 22px, 18px, 175px, 151px, '../images/icon-sprites.png', 'eye_open', );
+$footer-cnnic-name: 'footer_cnnic';
+$footer-cnnic-x: 58px;
+$footer-cnnic-y: 73px;
+$footer-cnnic-offset-x: -58px;
+$footer-cnnic-offset-y: -73px;
+$footer-cnnic-width: 74px;
+$footer-cnnic-height: 28px;
+$footer-cnnic-total-width: 175px;
+$footer-cnnic-total-height: 151px;
+$footer-cnnic-image: '../images/icon-sprites.png';
+$footer-cnnic: (58px, 73px, -58px, -73px, 74px, 28px, 175px, 151px, '../images/icon-sprites.png', 'footer_cnnic', );
+$footer-license-name: 'footer_license';
+$footer-license-x: 146px;
+$footer-license-y: 38px;
+$footer-license-offset-x: -146px;
+$footer-license-offset-y: -38px;
+$footer-license-width: 26px;
+$footer-license-height: 28px;
+$footer-license-total-width: 175px;
+$footer-license-total-height: 151px;
+$footer-license-image: '../images/icon-sprites.png';
+$footer-license: (146px, 38px, -146px, -38px, 26px, 28px, 175px, 151px, '../images/icon-sprites.png', 'footer_license', );
+$footer-publicfiles-name: 'footer_publicfiles';
+$footer-publicfiles-x: 146px;
+$footer-publicfiles-y: 0px;
+$footer-publicfiles-offset-x: -146px;
+$footer-publicfiles-offset-y: 0px;
+$footer-publicfiles-width: 29px;
+$footer-publicfiles-height: 30px;
+$footer-publicfiles-total-width: 175px;
+$footer-publicfiles-total-height: 151px;
+$footer-publicfiles-image: '../images/icon-sprites.png';
+$footer-publicfiles: (146px, 0px, -146px, 0px, 29px, 30px, 175px, 151px, '../images/icon-sprites.png', 'footer_publicfiles', );
+$spritesheet-width: 175px;
+$spritesheet-height: 151px;
+$spritesheet-image: '../images/icon-sprites.png';
+$spritesheet-sprites: ($checked-01, $checked-02, $close-btn-02-default, $close-btn-02, $close-btn-03, $close-thanks, $email-circle-default, $email-circle-hover, $eye-close, $eye-open, $footer-cnnic, $footer-license, $footer-publicfiles, );
+$spritesheet: (175px, 151px, '../images/icon-sprites.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  display:inline-block;
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .icon-#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

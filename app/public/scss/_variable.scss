@@ -1,0 +1,119 @@
+//自定义变量
+$color_main: #f6ab00; //页面风格颜色
+$color_job_name: #014099;
+
+$color_bg: #ebeef5; //1、主要的背景颜色，box-shadow ；2、主要的边框颜色
+$color_bg_hover: #ffb408; //background:#f6ab00->#ffb408
+$color_title_active: #303133; //标题选中的颜色，比如 【热门职位】,【最新职位】
+$color_title_default: #a7a7a7; //标题默认的颜色，比如 【热门职位】,【最新职位】
+$font_size_title: 18px;
+$font_size_title_intro: 12px;
+
+//input标签
+$color_border: #e5e5e5;
+$color_focus: #f7b111;
+$color_placeholder: #909399;
+$color_disabled: #a7a7a7;
+$color_red: #ff5657;
+
+$color_blue: #004098;
+$color_hover: #f58220;
+$color_body_bg: #f2f6fd;
+$color_909399: #909399;
+
+//亮点的样式
+%light_point {
+    height: 22px;
+    overflow: hidden;
+    span {
+        float: left;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+        height: 22px;
+        line-height: 20px;
+        border: 1px solid $color_bg;
+        font-size: 12px;
+        color: #a7a7a7;
+        padding: 0 7px;
+    }
+}
+
+/***** 第一套阴影 -begin  *****/
+$blur: 10px;
+$spread: 0;
+$color_shadow: #e3e8f0;
+$offset: 3px;
+
+%shadow_third {
+    // left-right-bottom
+    box-shadow: $offset $offset $blur $color_shadow, //右-X   上-Y
+    -$offset $offset $blur $color_shadow; //左-X 下-Y
+}
+
+%shadow-bottom {
+    box-shadow: 0 5px 5px $color_shadow;
+}
+
+%shadow_right_bottom {
+    box-shadow: $offset $offset $blur $color_shadow,
+    $offset $offset $blur $color_shadow;
+}
+
+%shadow-four {
+    box-shadow: 0 0 $blur $color_shadow;
+}
+
+/***** 第一套阴影 -end  *****/
+
+/***** 第二套阴影 -begin  *****/
+$offset2: 5px;
+$blur2: 10px; //对应 ps  --大小
+$spread2: 1px; //对应 ps  --扩展
+$color_shadow2: #eef1f6; //直接吸取 --阴影开始的颜色
+
+%shadow_left_top_bottom {
+    //不知道为什么不能使用 $offset2 这个变量
+    box-shadow: -5px 5px $blur2 $spread2 $color_shadow2,
+    -5px -5px $blur2 $spread2 $color_shadow2;
+    /*box-shadow: -5px 5px 10px 1px #eef1f6,
+    -5px -5px 10px 1px #eef1f6;*/
+}
+
+%shadow_four2 {
+    box-shadow: 0 0 $blur2 6px $color_shadow2;
+}
+
+/***** 第二套阴影 -end  *****/
+
+//自定义常用的 class
+%text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+%scrollbar {
+    //滚动条样式--模拟移动端
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+        border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        min-height: 10px;
+        background-clip: content-box;
+        background: #f6ab00;
+    }
+}
+
+%middle {
+    display: inline-block;
+    vertical-align: middle;
+}

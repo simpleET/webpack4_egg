@@ -1,0 +1,305 @@
+@charset "utf-8";
+@import "./variable";
+$color-primary: $color_main;
+$color-gray: #999;
+@font-face {
+  font-family: 'iconfont';  /* project id 572815 */
+  src: url('//at.alicdn.com/t/font_572815_zvydtatc6v.eot');
+  src: url('//at.alicdn.com/t/font_572815_zvydtatc6v.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_572815_zvydtatc6v.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_572815_zvydtatc6v.woff') format('woff'),
+  url('//at.alicdn.com/t/font_572815_zvydtatc6v.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_572815_zvydtatc6v.svg#iconfont') format('svg');
+}
+
+%iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin scrollbar($color,$track: rgba(0,0,0,0.2), $background: rgba(0,0,0,0.1)) {
+  ///*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+  //&::-webkit-scrollbar{
+  //    width: 6px;
+  //    height: 4px;
+  //}
+  ///*定义滚动条的轨道，内阴影及圆角*/
+  //&::-webkit-scrollbar-track{
+  //    -webkit-box-shadow: inset 0 0 5px $track;
+  //    border-radius: 0;
+  //    background: $background;
+  //}
+  ///*定义滑块，内阴影及圆角*/
+  //&::-webkit-scrollbar-thumb{
+  //    border-radius: 10px;
+  //    -webkit-box-shadow: inset 0 0 6px $color;
+  //    background-color: $color;
+  //}
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 4px;
+    background: none;
+  }
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    min-height: 10px;
+    background-clip: content-box;
+    background: #dedfe0;
+  }
+}
+
+.iconfont {
+  @extend %iconfont;
+}
+
+.text-overflow {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#job-selector {
+  #jbox-content {
+    width: 100%;
+  }
+
+  .cgary {
+    color: $color-gray;
+  }
+  // 关闭按钮
+  .jbox-close{
+    top:14px !important;
+  }
+  //  标题
+  .jbox-title-panel{
+    height: 54px;
+    line-height: 54px;
+  }
+  .jbox-title {
+    font-size: 18px;
+
+    span {
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+
+  .key-word {
+    position: absolute;
+    width: 160px;
+    height: 30px;
+    border-radius: 14px;
+    background: #fff;
+    border: none;
+    z-index: 2;
+    top: 18px;
+    left: 282px;
+    padding: 0 15px;
+    //outline: none;
+  }
+
+  .selected-box {
+    min-height: 45px;
+    padding: 0 30px 10px 130px;
+    border-bottom: 1px dashed #e8e8e8;
+    position: relative;
+
+    .tip {
+      position: absolute;
+      left: 0;
+      top: 0;
+      line-height: 55px;
+      width: 130px;
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .item {
+      margin-top: 10px;
+      float: left;
+      max-width: 184px;
+      height: 34px;
+      line-height: 32px;
+      font-size: 14px;
+      color: #f6ab00;
+      background: #fff;
+      border: 1px solid $color-primary;
+      border-radius: 16px;
+      margin-right: 14px;
+      padding: 0 34px 0 14px;
+      position: relative;
+      @extend .text-overflow;
+
+      .del {
+        position: absolute;
+        right: 13px;
+        top: 11px;
+        line-height: 14px;
+        font-size: 17px;
+        font-family: SimSun;
+        color: $color-primary;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .selected-cont {
+    padding: 10px 30px 0;
+    height: 350px;
+  }
+
+  .selected-tags {
+    padding: 10px 30px 0;
+    height: 350px;
+    display: none;
+    overflow-y: auto;
+
+    .item {
+      box-sizing: border-box;
+      float: left;
+      height: 34px;
+      line-height: 32px;
+      color: #333;
+      border: 1px solid #c0c4cc;
+      border-radius: 17px;
+      padding: 0 14px;
+      margin: 0 0 10px 15px;
+      cursor: pointer;
+
+      &.selected {
+        background: $color-primary;
+        border-color: $color-primary;
+        color: #fff;
+      }
+    }
+
+    .no_data {
+      margin: 32px auto 0;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+
+      i {
+        display: inline-block;
+      }
+    }
+  }
+
+  .selected-list {
+    float: left;
+    width: 33%;
+    height: 350px;
+    overflow-y: auto;
+    font-size: 14px;
+    @include scrollbar(#dedfe0, rgba(0, 0, 0, 0), transparent);
+    border-right: 1px solid #e8e8e8;
+
+    li {
+      height: 44px;
+      line-height: 44px;
+      padding: 0 40px 0 20px;
+      color: #333333;
+      position: relative;
+      cursor: pointer;
+      transition: all 300ms 0s;
+
+      &:after {
+        display: block;
+        content: ">";
+        position: absolute;
+        top: 0;
+        right: 30px;
+        font-size: 19px;
+        font-family: SimSun;
+        color: #b7bec6;
+      }
+
+      &.open, &.selected, &:hover {
+        color: $color-primary;
+
+        &:after {
+          color: $color-primary;
+        }
+      }
+    }
+
+    &.selected-list-first {
+      border-right: 0;
+
+      li {
+        background: #f2f3f5;
+
+        &.open {
+          background: #fff;
+          color: #333333;
+        }
+
+        &.selected, &:hover {
+          color: $color-primary;
+
+          &:after {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+
+    &.selected-list-last {
+      border-right: 0;
+
+      li {
+        &:after {
+          content: " ";
+          font-size: 30px;
+          right: 18px;
+        }
+      }
+    }
+  }
+
+  .selected-btn {
+    margin-top: 20px;
+    text-align: center;
+
+    a {
+      box-sizing: border-box;
+      display: inline-block;
+      width: 140px;
+      line-height: 38px;
+      font-size:16px;
+      border-radius: 25px;
+    }
+
+    .submit {
+      background: $color-primary;
+      color: #fff;
+      border: 1px solid $color-primary;
+      margin-left: 10px;
+
+      &:hover {
+        background: #f7b31a;
+        border-color: #f7b31a;
+      }
+    }
+
+    .cancel {
+      border: 1px solid #e5e5e5;
+      color: #606266;
+
+      &:hover {
+        background: $color-primary;
+        border-color: $color-primary;
+        color: #fff;
+      }
+    }
+  }
+}

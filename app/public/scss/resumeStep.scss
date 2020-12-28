@@ -1,0 +1,620 @@
+//注册填写简历4步骤的样式,重新写
+@charset "utf-8";
+@import "./variable";
+@import "../plug/localitiesSelector.css";// 地区选择弹窗
+@import '../scss/job-selector.scss'; // 职位选择弹窗
+//设置插件
+/*.jbox * {
+  box-sizing: content-box;
+}*/
+
+body {
+  background: #f2f6fc;
+  overflow-x: hidden;
+}
+
+
+/*%scrollbar {
+  //滚动条样式--模拟移动端
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 4px;
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    min-height: 10px;
+    background-clip: content-box;
+    background: #f6ab00;
+  }
+}*/
+
+//自定义变量
+$color_main: #f6ab00;
+
+/**** 公共头部 **********/
+.reg_header_cont {
+  background: #fff;
+  //box-shadow: none;
+  .box {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  @at-root .reg_header_content {
+    height: 70px;
+    > .userName {
+      float: right;
+      font-size: 16px;
+      color: #666;
+      line-height: 70px;
+
+      &:after {
+        content: '>';
+        font-family: simsun;
+        font-size: 19px;
+        margin-left: 8px;
+      }
+    }
+
+    @at-root .reg_zt_logo {
+      display: inline-block;
+      width: 305px;
+      height: 50px;
+      background: url("../images/zt_logo_02.png") no-repeat;
+      text-indent: -999px;
+      margin-top: 10px;
+    }
+  }
+}
+
+/***** banner ****/
+.bg_cont {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  z-index: -1;
+
+  .bg_group {
+    position: relative;
+    left: -50%;
+
+    > div {
+      width: 1920px;
+      height: 271px;
+    }
+
+    .step1 {
+      background: url("../images/step_bg_01.jpg") no-repeat;
+    }
+
+    .step2 {
+      background: url("../images/step_bg_02.jpg") no-repeat;
+    }
+
+    .step3 {
+      background: url("../images/step_bg_03.jpg") no-repeat;
+    }
+
+  }
+}
+
+/*****  main -begin *****/
+.main_cont {
+  height: 760px;
+  @at-root .main_box {
+    width: 960px;
+    margin: 0 auto;
+    .title {
+      font-size: 30px;
+      color: #004098;
+      font-weight: bold;
+      text-align: center;
+      margin: 52px 36px;
+
+      > span {
+        display: block;
+        font-size: 14px;
+        color: #004098;
+        margin-top: 6px;
+      }
+    }
+
+    @at-root .main_content {
+      position: relative;
+      width: 620px;
+      margin: 0 auto 68px;
+      padding: 50px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      form {
+        width: 550px;
+        margin-left: -20px;
+        @at-root .form_group {
+          width: 250px;
+          height: 40px;
+          float: left;
+          margin: 0 0 30px 20px;
+          position: relative;
+          font-size: 12px;
+          color: #888;
+          &.col_100 {
+            width: 520px;
+          }
+
+          input[type='text'], select {
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            width: 100%;
+            text-indent: 15px;
+            font-size: 14px;
+            color: #333;
+            background: #fff;
+
+            &::-webkit-input-placeholder, &:-ms-input-placeholder, &::-moz-placeholder {
+              font-size: 14px;
+              color: #888;
+            }
+
+          }
+
+          input[type='text']:focus {
+            border-color: #f6ab00;
+          }
+
+          textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            font-size: 14px;
+            color: #333;
+            background: none;
+            padding: 10px 15px;
+            resize: none;
+
+            &::-webkit-input-placeholder, &:-ms-input-placeholder, &::-moz-placeholder {
+              font-size: 14px;
+              color: #888;
+            }
+          }
+
+          //下三角
+          @at-root .icon-trangle_down {
+            position: absolute;
+            right: 16px;
+            top: 17px;
+          }
+          //时间选择icon
+          @at-root .icon-icon_date {
+            position: absolute;
+            right: 16px;
+            top: 11px;
+          }
+          //波浪符号
+          @at-root .tilde {
+            position: absolute;
+            right: -14px;
+            top: 10px;
+            font-size: 14px;
+          }
+
+          //职位选择图标
+          @at-root .icon-job_icon {
+            position: absolute;
+            right: 16px;
+            top: 11px;
+          }
+
+          @at-root .icon-position_icon {
+            position: absolute;
+            right: 16px;
+            top: 13px;
+          }
+          //选择性别
+          @at-root .gender_group {
+            position: absolute;
+            right: 1px;
+            top: 1px;
+            width: 80px;
+            height: 38px;
+            > label {
+              float: left;
+              width: 50%;
+              height: 100%;
+              border-left: 1px solid #ebeef5;
+
+              &.select > span {
+                background: $color_main;
+                color: #fff;
+              }
+
+              > input {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+              }
+
+              > span {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                line-height: 38px;
+                text-align: center;
+                background: #fff;
+                font-size: 14px;
+                color: #888;
+              }
+            }
+          }
+          //短信验证码
+          @at-root .SMSCont {
+            display: none;
+            float: left;
+            width: 130px;
+            margin-right: 10px;
+          }
+        }
+        @at-root .form_group.jobTypeCont {
+          .jobTypeBOx {
+            position: relative;
+            float: left;
+            width: 70px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin-right: 10px;
+
+            > input {
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: -1;
+            }
+
+            > span {
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+              border: 1px solid #ccc;
+              border-radius: 2px;
+
+              &.select {
+                border-color: $color_main;
+                color: $color_main;
+              }
+            }
+          }
+        }
+        @at-root .btnSubmit {
+          display: block;
+          width: 200px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          background: $color_main;
+          font-size: 16px;
+          color: #fff;
+          border-radius: 25px;
+          margin: 20px 0 0 339px;
+          &:hover {
+            color: #fff;
+            background: #f58220;
+          }
+
+          &.btnSubmit2 {
+            margin: 20px auto 0;
+          }
+        }
+      }
+
+      @at-root .dot {
+        overflow: hidden;
+        text-align: center;
+        margin-top: 30px;
+        li {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #ececec;
+          margin: 0 5px;
+
+          &.active {
+            background: $color_main;
+          }
+        }
+      }
+      @at-root .resume_tips_01 {
+        position: absolute;
+        right: -247px;
+        top: 0;
+        width: 236px;
+        height: 120px;
+        background: url("../images/fill_resume_tips_basic.jpg") no-repeat;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+//工作年限下拉样式
+.outList {
+  position: absolute;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  //@extend %scrollbar;
+
+  .iList {
+    border: none !important;
+    overflow: auto;
+    @extend %scrollbar;
+
+    > a {
+      display: block;
+      height: 24px;
+      line-height: 24px;
+      font-size: 14px;
+      color: #888;
+      padding-left: 10px;
+      margin: 0;
+
+      &:hover {
+        color: #f6ab00;
+        background: #fff5e9;
+      }
+    }
+  }
+}
+
+//短信验证码
+#getDynamicCode {
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #999;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+
+  &.disable {
+    background: #ccc;
+  }
+}
+
+.placeholder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #888;
+  text-indent: 15px;
+
+  &:hover {
+    color: #888;
+  }
+
+  > i { //解决IE元素没有内容不能点击问题
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.form_footer {
+  position: relative;
+
+  .goBackBtn {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    font-size: 16px;
+    color: #888;
+
+    > span {
+      font-family: simsun;
+      margin-right: 10px;
+      font-size: 22px;
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+
+//薪资下拉
+.salary_cont {
+  display: none;
+  position: absolute;
+  top: 39px;
+  left: 0;
+  z-index: 2;
+  background: #fff;
+  width: 100%;
+  height: 198px;
+  overflow: auto;
+  @extend %scrollbar;
+  border: 1px solid #ccc;
+
+  li {
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 16px;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover, &.select {
+      color: #f6ab00;
+      background: #fff5e9;
+    }
+  }
+}
+
+.search_tip_cont {
+  position: absolute;
+  left: 0;
+  top: 44px;
+  z-index: 3;
+  background: #fff;
+  border: 1px solid #f6ab00;
+  border-radius: 2px;
+  width: 100%;
+  line-height: 24px;
+  display: none;
+  @at-root .search_tip_content {
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+    li {
+      padding: 0 16px;
+      cursor: pointer;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      height: 35px;
+      line-height: 35px;
+
+      &:hover, &.keyHover {
+        color: #fff;
+        background: #f6ab00;
+      }
+    }
+  }
+}
+
+.mobileShow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+}
+
+/*****  main -end *****/
+
+
+/***** 以后可以废弃的样式 **********/
+
+/*//错误提示 --覆盖common.css
+label.error {
+  display: inline;
+  color: red;
+  background: none;
+  padding: 0;
+
+}
+
+.selDropDown2 {
+  height: 100%;
+}
+*/
+//专业名称样式
+#speciality.novalidate {
+  background: #f2f6fc;
+  color: #a7a7a7;
+}
+
+/**** 弹窗样式  *****/
+.modal_mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  .modal_cont {
+    position: absolute;
+
+    > .modal_box {
+      background: rgba(0, 0, 0, 0.7);
+      filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#B2000000, endcolorstr=#B2000000) \8;
+      border-radius: 2px;
+      padding: 8px 20px;
+      font-size: 16px;
+      color: #fff;
+
+      > .icon-alert_icon {
+        float: left;
+        margin-right: 11px;
+      }
+    }
+  }
+}
+
+//app 广告弹窗样式
+.app_ad_mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: #000;
+  opacity: 0.4;
+  filter: alpha(opacity=40)
+}
+
+.app_ad_content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 430px;
+  height: 240px;
+  background: #fff;
+  opacity: 1;
+  z-index: 102;
+  margin-top: -115px;
+  margin-left: -214px;
+  text-align: center;
+  border: 1px solid $color_main;
+
+  .img_content {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  p {
+    font-size: 14px;
+
+    &.font_18 {
+      margin-top: 14px;
+      font-size: 18px;
+      line-height: 34px;
+    }
+
+    strong {
+      color: #4265a8;
+      margin-left: 6px;
+      cursor: pointer;
+
+      em {
+        color: #5d5d5d;
+        font-weight: 400;
+      }
+    }
+  }
+
+}
