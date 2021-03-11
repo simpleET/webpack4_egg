@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>人才网首页</title>
+    <title>首页</title>
     <link rel="stylesheet" href="{{manifest['common.css']}}">
 <!--    <link rel="stylesheet" href="/public/dist/index.css">-->
     <link rel="stylesheet" href="{{manifest['index.css']}}">
@@ -18,53 +18,48 @@
                     <i class="iconfont iconcaidan"></i>
                 </a>
             </div>
-            <ul class="nav-right-content" style="display: block;">
+            <ul class="nav-right-content" style="display: none;">
                 <li class="active"><a href="/">首页</a><i class="border"></i></li>
                 <li><a href="/irc/" target="_blank">招聘会+</a><i class="border"></i></li>
-                <li><a href="/irc/fair/lingxiu" target="_blank">领秀</a><i class="border"></i></li>
-                <li><a href="http://www.xue5156.com/Home/Course/search/category1/105.html?tdsourcetag=s_pcqq_aiomsg" target="_blank">智能制造学院</a><i class="border"></i></li>
+                <li><a target="_blank">领秀</a><i class="border"></i></li>
+                <li><a >制造学院</a><i class="border"></i></li>
                 <li class="user-msg-box no-login">
                     <a class="user-name hidden" href="http://my.job5156.com/per"></a>
                     <i class="caret-bottom hidden"></i>
                     <ul class="hidden" id="user_msg">
                         <li>
-                            <a href="http://my.job5156.com/per"><span>个人中心</span></a>
+                            <a><span>个人中心</span></a>
                         </li>
                         <li class="has-border">
-                            <a href="http://my.job5156.com/per/resume"><span>我的简历</span></a>
+                            <a ><span>我的简历</span></a>
                         </li>
                         <li>
-                            <a href="http://my.job5156.com/per/job/invite">
+                            <a ">
                                 <span class="numbs interview-numbs"></span>
                                 <span>面试邀请</span>
                             </a>
                         </li>
                         <li>
-                            <a class="mid" href="http://my.job5156.com/per/job/view">
+                            <a >
                                 <span class="numbs check-numbs"></span>
                                 <span>谁看过我</span>
                             </a>
                         </li>
                         <li class="has-border">
-                            <a href="http://my.job5156.com/per/message">
+                            <a >
                                 <span class="numbs letter-numbs"></span>
                                 <span>站内消息</span>
                             </a>
                         </li>
-                        <li><a href="http://my.job5156.com/per/setting/privacy">账号设置</a></li>
+                        <li><a >账号设置</a></li>
                         <li id="logout"><a>退出</a></li>
                     </ul>
                     <span class="btn-login-reg">
-                        <a href="/register/per">个人注册</a> / <a class="login-per-dialog">登录</a>
+                        <a >个人注册</a> / <a class="login-per-dialog">登录</a>
                     </span>
                 </li>
             </ul>
-            <div class="nav-left-content">
-                <a class="zt-logo" href="/" title="智通人才网">
-                    <img src="/public/images/per_logo.png" width="164" height="33" alt="智通人才网">
-                </a>
-                <a class="goto-com" href="http://zp.job5156.com" target="_blank" rel="nofollow">企业登录</a>
-            </div>
+          
             <input type="hidden" id="page_name" value="index">
             <input type="hidden" id="cityEn" value="index">
 
@@ -135,7 +130,7 @@
             </div>
             <div class="user-msg-cont hidden">
                 <span class="btn-download-app">下载APP</span>
-                <a href="http://my.job5156.com/per" class="user-photo">
+                <a class="user-photo">
                     <img src="" width="70" height="70">
                 </a>
                 <p class="user-name-box">
@@ -154,15 +149,15 @@
                     </div>
                 </div>
                 <div class="msg-nums-tip">
-                    <a href="http://my.job5156.com/per/job/invite">
+                    <a>
                         <span><i class="badge interview-numbs"></i><i class="iconfont iconmianshiyaoqing"></i></span>
                         <p>面试邀请</p>
                     </a>
-                    <a class="mid" href="http://my.job5156.com/per/job/view">
+                    <a class="mid" >
                         <span><i class="badge check-numbs"></i><i class="iconfont iconshuikanguowo"></i></span>
                         <p>谁看过我</p>
                     </a>
-                    <a href="http://my.job5156.com/per/message">
+                    <a >
                         <span><i class="badge letter-numbs"></i><i class="iconfont iconzhanneixiaoxi"></i></span>
                         <p>站内消息</p>
                     </a>
@@ -175,7 +170,7 @@
                         </p>
                         <div class="progressbar"><i class="res-perfectNum-bar"></i></div>
                     </div>
-                    <a href="http://my.job5156.com/per/resume">编辑简历</a>
+                    <a >编辑简历</a>
                 </div>
                 <div class="res-integrity">
                     <div class="res-progressbar">
@@ -185,7 +180,7 @@
                         </p>
                         <div class="progressbar"><i class="res-freshness-bar"></i></div>
                     </div>
-                    <a href="http://my.job5156.com/per/resume?#refreshRes">刷新简历</a>
+                    <a >刷新简历</a>
                 </div>
             </div>
             <div class="login-cont hidden" style="display: block;">
@@ -194,108 +189,6 @@
                 </div>
                 <div class="login-form-box">
                     <div class="login-form-content">
-                        <input id="domain" type="hidden" value="http://www.job5156.com">
-                        <input type="hidden" value="http://my.job5156.com" id="domain2">
-                        <input type="hidden" value="http://eyasapi.job5156.com" id="eyasApi">
+                     
                         <input type="hidden" value="" id="isAutoRegain">
-                        <form id="reg_form" class="login-form active" novalidate="novalidate">
-                            <div class="form-item">
-                                <input type="text" name="mobile" id="mobile" placeholder="手机号码" maxlength="11">
-                            </div>
-                            <div class="form-item">
-                                <input type="text" name="dynamicCode" id="dynamic_code" placeholder="短信验证码">
-                                <a class="btn-get-code">获取验证码</a>
-                            </div>
-                            <p class="btn-change-form"><a>密码登录</a></p>
-                            <a class="btn-submit">短信注册/登录</a>
-
-                            <input type="hidden" name="_csrf" value="bQt2SwLL-Cv1-zhx0Lmy5bntb470nB6MilME"></form>
-                        <form id="login_form" class="login-form" novalidate="novalidate">
-                            <div class="form-item">
-                                <input type="text" name="userAccount" id="user_account" placeholder="手机号码/邮箱/用户名" autocomplete="off">
-                            </div>
-                            <div class="form-item">
-                                <input type="password" name="userPassword" id="user_password" maxlength="20" placeholder="请输入密码">
-                                <span class="isSeePw">
-                            <i class="iconfont iconeye"></i>
-                            <i class="iconfont iconclose"></i>
-                        </span>
-                            </div>
-                            <input type="hidden" id="img_captcha" name="imgCaptcha">
-                            <p class="btn-change-form">
-                                <a class="link-forget" href="/forget/per/step1" target="_blank">忘记密码？</a>
-                                <a>短信注册/登录</a>
-                            </p>
-                            <a class="btn-submit">密码登录</a>
-
-                            <input type="hidden" name="_csrf" value="re3h71DO-KD67XlOCc6NmbMgplRePfV7Cdto"></form>
-                        <p class="clear-both"></p>
-                    </div>
-                </div>
-                <p>注册表示您同意 <a href="/about/agreement" target="_blank" rel="nofollow">用户协议</a> 和 <a href="/about/privacy" target="_blank" rel="nofollow">隐私政策</a></p>
-                <a class="btn-com-entry" href="http://zp.job5156.com" target="_blank" rel="nofollow">企业入口</a>
-            </div>
-        </div>
-        <div class="left-box">
-            <div class="swiper-container">
-                <div class="swiper-wrapper" style="width: 2840px; height: 260px; transform: translate3d(-2130px, 0px, 0px); transition-duration: 0.3s;"><div class="swiper-slide swiper-slide-duplicate" style="width: 710px; height: 260px;">
-                    <a href="http://pub.job5156.com/winopen/2019/19-03/px-xinshuishi0328/index.html" target="_blank" title="薪税师">
-                        <img src="https://pub.job5156.com/winopen/2019/images/px-xinshuishi0902.jpg" width="710" height="260" alt="薪税师">
-                    </a>
-                    <i class="watermark"></i>
-                </div>
-                    <div class="swiper-slide" style="width: 710px; height: 260px;">
-                        <a href="http://pub.job5156.com/winopen/2019/19-08/jacy-cdh0820/index.html" target="_blank" title="浙江炊大王招聘">
-                            <img src="https://pub.job5156.com/winopen/2019/images/jacy-cdh0826.jpg" width="710" height="260" alt="浙江炊大王招聘">
-                        </a>
-                        <i class="watermark"></i>
-                    </div>
-                    <div class="swiper-slide" style="width: 710px; height: 260px;">
-                        <a href="http://pub.job5156.com/winopen/2019/19-03/px-xinshuishi0328/index.html" target="_blank" title="薪税师">
-                            <img src="https://pub.job5156.com/winopen/2019/images/px-xinshuishi0902.jpg" width="710" height="260" alt="薪税师">
-                        </a>
-                        <i class="watermark"></i>
-                    </div>
-                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-visible swiper-slide-active" style="width: 710px; height: 260px;">
-                        <a href="http://pub.job5156.com/winopen/2019/19-08/jacy-cdh0820/index.html" target="_blank" title="浙江炊大王招聘">
-                            <img src="https://pub.job5156.com/winopen/2019/images/jacy-cdh0826.jpg" width="710" height="260" alt="浙江炊大王招聘">
-                        </a>
-                        <i class="watermark"></i>
-                    </div></div>
-                <div class="pagination-box">
-                    <div class="pagination"><span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span><span class="swiper-pagination-switch"></span></div>
-                </div>
-                <div class="btn-switch_left">
-                    <i class="iconfont iconzuobian"></i>
-                    <i class="mask"></i>
-                </div>
-                <div class="btn-switch_right">
-                    <i class="iconfont iconyoubian"></i>
-                    <i class="mask"></i>
-                </div>
-            </div>
-            <div class="banner-min first">
-                <!--                <a href="http://www.job5156.com/app" target="_blank" title="随时随地移动求职">-->
-                <a href="http://www.job5156.com/app" target="_blank" title="随时随地移动求职">
-                    <img src="https://pub.job5156.com/winopen/2019/images/px-app0822.jpg" width="352" height="144" alt="随时随地移动求职">
-                    <i class="watermark"></i>
-                </a>
-            </div>
-            <div class="banner-min ">
-                <!--                <a href="http://www.job5156.com/irc/fair/lingxiu/" target="_blank" title="领秀 • 中高级人才网络专场招聘会">-->
-                <a href="http://www.job5156.com/irc/fair/lingxiu/" target="_blank" title="领秀 • 中高级人才网络专场招聘会">
-                    <img src="https://pub.job5156.com/winopen/2019/images/px-lingxiu0824.jpg" width="352" height="144" alt="领秀 • 中高级人才网络专场招聘会">
-                    <i class="watermark"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<button class="btn_submit">点击啊</button>
-
-<script src="/public/plugin/jquery.js"></script>
-<script src="{{manifest['common.js']}}"></script>
-<script src="{{manifest['header.js']}}"></script>
-<script src="{{manifest['index.js']}}"></script>
-</body>
-</html>
+                        <form id="reg_form" class="login-form active" no
